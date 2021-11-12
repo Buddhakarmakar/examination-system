@@ -25,7 +25,7 @@ export default function SendData(data) {
                 }
             </h1>
             <button className="show-answer">
-                <a href="/show-answer/">
+                <a href="/show-answer">
                 Show Answer  Script
                 </a></button>
                 {/* {handleSaveToPC(data,"mydata")} */}
