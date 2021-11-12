@@ -43,7 +43,7 @@ li{
     list-style: none;
 }
 .container{
-    width: 80%;
+    width: 100%;
     height: auto;
     display: flex;
     /* background-color: rgb(126, 12, 12); */
@@ -192,7 +192,13 @@ a:visited{
   
 
 }
-
+.show-answer{
+  height:40px;
+  margin: 10px;
+  padding:5px;
+  background-color:lightblue;
+  color: red;
+}
 .radio-disabled{
   cursor: not-allowed;
 }

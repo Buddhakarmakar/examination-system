@@ -15,9 +15,13 @@ export default function CheckAnswer() {
     }
     
     return (
-        <div className="side-bar"> 
-            <h2> Your score is : {result}</h2>
-            <h2>Wrong answer:{data.length -result}</h2>
+        <div className="container"> 
+            <h3> Your score is : {result}</h3>
+            <h4>Wrong answer:{data.length -result}</h4>
+            <hr/>
+            
+            
         </div>
+        
     )
 }

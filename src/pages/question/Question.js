@@ -51,9 +51,9 @@ function Question({ itemsPerPage }) {
         }
     }
 
-    const remainingTime=()=>{
-        return new Date().toLocaleTimeString()
-    }
+    // const remainingTime=()=>{
+    //     return new Date().toLocaleTimeString()
+    // }
 
     const totalQues=questions.length;
     const handleChange=(option_id,question)=>{
@@ -72,14 +72,7 @@ function Question({ itemsPerPage }) {
 }
         const questionPaper=data;
 
-    useEffect(() => {
-        console.log("Cahnge detected")
-        console.log(flag)
-       
-    
-    }, [questionPaper,flag,isSubmitted]);
-
-
+  
    
     // const [selectedAnswers, setSelectedAnswers] = useState();
 
@@ -124,12 +117,22 @@ function Question({ itemsPerPage }) {
         const time = new Date();
         time.setSeconds(time.getSeconds() + timeLeft); // 5 sec timer
 
+        useEffect(() => {
+            console.log("Cahnge detected")
+            console.log(flag)
+           
+        
+        }, [questionPaper,flag,isSubmitted,timeLeft]);
+    
+    
+
   return (
     <>
         <div className="container"> 
             {displayQuestions}
             <div>
-              <MyTimer expiryTimestamp={time} />
+                {timeLeft>0?
+                    <MyTimer expiryTimestamp={time} />:<h3>Exam Submitted</h3>}
             </div>
         </div>
 

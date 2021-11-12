@@ -16,7 +16,8 @@ export default function MyTimer({ expiryTimestamp }) {
     restart,
   } = useTimer({ expiryTimestamp, onExpire: () => 
                        ( alert("Times up"),
-                        isSubmitted.isSubmitted=true
+                        isSubmitted.isSubmitted=true,
+                        isSubmitted.timeLeft=0
                         
                         )
 
